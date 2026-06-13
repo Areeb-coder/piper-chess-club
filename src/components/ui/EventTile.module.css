@@ -1,0 +1,29 @@
+.link {
+  display: block;
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.colorAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}

@@ -1,0 +1,178 @@
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #0A0A0B;
+}
+
+.imageLayer {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  will-change: transform;
+  /* Complex cinematic dolly and pan */
+  animation: cinematicPan 60s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+.image {
+  object-fit: cover;
+  opacity: 0.95;
+  filter: contrast(1.1) brightness(0.85);
+}
+
+@keyframes cinematicPan {
+  0% { transform: scale(1) translate3d(0, 0, 0); filter: blur(0px); }
+  25% { transform: scale(1.02) translate3d(-2%, 1%, 0); filter: blur(1px); }
+  50% { transform: scale(1.05) translate3d(1%, -2%, 0); filter: blur(0px); }
+  75% { transform: scale(1.02) translate3d(-1%, -1%, 0); filter: blur(2px); }
+  100% { transform: scale(1) translate3d(2%, 2%, 0); filter: blur(0px); }
+}
+
+/* Faint chessboard grid emerging from darkness */
+.gridLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100px 100px;
+  transform: perspective(500px) rotateX(60deg) translateY(-100px) scale(3);
+  opacity: 0.4;
+  animation: gridPulse 15s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  pointer-events: none;
+}
+
+@keyframes gridPulse {
+  0% { opacity: 0.1; transform: perspective(500px) rotateX(60deg) translateY(-100px) scale(3); }
+  100% { opacity: 0.6; transform: perspective(500px) rotateX(65deg) translateY(0px) scale(3.2); }
+}
+
+/* Light Trails */
+.lightTrails {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.trail {
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, var(--accent-gold), transparent);
+  filter: blur(2px);
+  opacity: 0;
+}
+
+.trail:nth-child(1) { left: 30%; animation: trailMove 8s infinite 1s; }
+.trail:nth-child(2) { left: 60%; height: 300px; animation: trailMove 12s infinite 4s; }
+.trail:nth-child(3) { left: 80%; animation: trailMove 10s infinite 7s; }
+
+@keyframes trailMove {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateY(100vh); opacity: 0; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Ghostly moves */
+.ghostMoves {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 20%);
+  animation: ghostPulse 12s infinite;
+}
+
+@keyframes ghostPulse {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+.fogLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 50%, transparent 20%, rgba(10, 10, 11, 0.4) 80%);
+  opacity: 0.5;
+  animation: fogDrift 60s linear infinite;
+  will-change: transform;
+}
+
+@keyframes fogDrift {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.particleLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.particleLayer::before, .particleLayer::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    10vw 20vh #fff, 20vw 80vh #fff, 30vw 40vh #fff, 40vw 60vh #fff, 
+    50vw 10vh #fff, 60vw 90vh #fff, 70vw 30vh #fff, 80vw 70vh #fff, 
+    90vw 50vh #fff, 95vw 85vh #fff, 15vw 15vh #F5B041, 65vw 55vh #F5B041,
+    25vw 25vh #fff, 35vw 75vh #fff, 45vw 15vh #fff, 55vw 85vh #fff,
+    75vw 45vh #fff, 85vw 25vh #fff, 5vw 95vh #fff, 8vw 5vh #fff;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: dustFloat 30s linear infinite;
+}
+
+.particleLayer::after {
+  width: 3px;
+  height: 3px;
+  box-shadow: 
+    12vw 88vh #fff, 22vw 12vh #fff, 32vw 68vh #fff, 42vw 32vh #fff, 
+    52vw 78vh #F5B041, 62vw 22vh #fff, 72vw 58vh #fff, 82vw 42vh #fff, 
+    92vw 98vh #fff, 98vw 2vh #fff;
+  animation: dustFloat 40s linear infinite reverse;
+  opacity: 0.2;
+}
+
+@keyframes dustFloat {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-100vh) translateX(5vw); }
+}
+
+.darkOverlay {
+  position: absolute;
+  inset: 0;
+  /* Blend dark top/bottom bars for text readability, keep center slightly clear */
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 11, 0.8) 0%,
+    rgba(10, 10, 11, 0.4) 20%,
+    rgba(10, 10, 11, 0.6) 80%,
+    rgba(10, 10, 11, 0.9) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageLayer, .fogLayer, .particleLayer::before, .particleLayer::after {
+    animation: none;
+  }
+}

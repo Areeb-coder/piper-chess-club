@@ -1,0 +1,56 @@
+.bracketContainer {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  padding: 2rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-gold) var(--surface-base);
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.roundName {
+  text-align: center;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.matches {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.match {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.team:last-child {
+  border-bottom: none;
+}
+
+.score {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-gold);
+}
