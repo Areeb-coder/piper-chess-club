@@ -13,8 +13,8 @@ export default function CommunityPage() {
           </p>
           
           <div className="flex-center gap-4">
-            <a href="#" className="btn-primary">Discord Server</a>
-            <a href="#" className="btn-secondary">Instagram</a>
+            <a href="https://chat.whatsapp.com/H68FHr8X6Y8AJLnMYoccwE" target="_blank" rel="noopener noreferrer" className="btn-primary">WhatsApp Group</a>
+            <a href="https://www.chess.com/club/piper-chess-club/join" target="_blank" rel="noopener noreferrer" className="btn-secondary">Chess.com Community</a>
           </div>
         </div>
       </ScrollScene>

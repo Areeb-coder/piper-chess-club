@@ -17,6 +17,12 @@ export interface Event {
   is_active: boolean;
 }
 
+export interface EventResult {
+  rank: string;
+  names: string[];
+  department?: string;
+}
+
 export interface EventEdition {
   slug: string;
   eventSlug: string;
@@ -29,6 +35,10 @@ export interface EventEdition {
   hero_image?: string;
   edition_intro: string;
   format_notes?: string;
+  heroIntro?: string;
+  overview?: string;
+  highlights?: string[];
+  results?: EventResult[];
 }
 
 export interface Team {

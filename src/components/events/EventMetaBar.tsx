@@ -4,11 +4,10 @@ import styles from './EventMetaBar.module.css';
 interface EventMetaBarProps {
   format: string;
   timeControl: string;
-  location?: string;
   status?: string;
 }
 
-export const EventMetaBar = ({ format, timeControl, location, status }: EventMetaBarProps) => {
+export const EventMetaBar = ({ format, timeControl, status }: EventMetaBarProps) => {
   return (
     <div className={`glass-panel ${styles.metaBar}`}>
       <div className={styles.item}>
@@ -19,12 +18,6 @@ export const EventMetaBar = ({ format, timeControl, location, status }: EventMet
         <span className={styles.label}>Time Control</span>
         <span className={styles.value}>{timeControl}</span>
       </div>
-      {location && (
-        <div className={styles.item}>
-          <span className={styles.label}>Location</span>
-          <span className={styles.value}>{location}</span>
-        </div>
-      )}
       {status && (
         <div className={styles.item}>
           <span className={styles.label}>Status</span>

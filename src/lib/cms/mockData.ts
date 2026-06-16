@@ -9,44 +9,44 @@ export const events: Event[] = [
     visibility_rank: 1,
     primary_color: 'var(--accent-gold)',
     overview_richtext: '<p>The ultimate test of chess mastery. Teams from across the university battle for the ultimate crown.</p>',
-    format_summary: '16 teams, 4 boards per match',
+    format_summary: '16 teams, 3 boards per match',
     typical_time_control: '10+2',
     is_active: true
   },
   {
-    slug: 'womens-olympiad',
+    slug: 'womens',
     name: 'Women\'s Chess Olympiad',
     short_tagline: 'Absolute dominance.',
     event_category: 'womens',
     visibility_rank: 2,
     primary_color: 'var(--accent-womens)',
     overview_richtext: '<p>Our flagship women’s tournament showcasing the strongest female players in the grid.</p>',
-    format_summary: '8 teams, 2 boards per match',
+    format_summary: '8 teams, 3 boards per match',
     typical_time_control: '10+2',
     is_active: true
   },
   {
-    slug: 'freestyle',
-    name: 'Freestyle Chess',
-    short_tagline: 'No memorised lines. Just chess.',
-    event_category: 'freestyle',
+    slug: 'inter-department',
+    name: 'Inter Department Chess League',
+    short_tagline: 'Settle the Score.',
+    event_category: 'department',
     visibility_rank: 3,
-    primary_color: 'var(--accent-freestyle)',
-    overview_richtext: '<p>Chess960 format. Pure calculation and raw intuition.</p>',
-    format_summary: '32 players, Swiss + Knockout',
-    typical_time_control: '15+10',
+    primary_color: '#2ecc71',
+    overview_richtext: '<p>A brutal knockout tournament where university departments fight for ultimate bragging rights.</p>',
+    format_summary: 'Knockout Bracket',
+    typical_time_control: '10+2',
     is_active: true
   },
   {
-    slug: 'freshers',
-    name: 'Freshers Championship',
-    short_tagline: 'The First Blood.',
-    event_category: 'freshers',
+    slug: 'piper-championship',
+    name: 'Piper Chess Championship',
+    short_tagline: 'The Pinnacle.',
+    event_category: 'flagship',
     visibility_rank: 4,
-    primary_color: '#3498db',
-    overview_richtext: '<p>The ultimate proving ground for the newest batch of students. Unrated, chaotic, and completely unpredictable.</p>',
-    format_summary: 'Swiss System, 7 Rounds',
-    typical_time_control: '10+0',
+    primary_color: '#e67e22',
+    overview_richtext: '<p>The pinnacle of individual achievement.</p>',
+    format_summary: 'Individual',
+    typical_time_control: '15+10',
     is_active: true
   },
   {
@@ -62,64 +62,345 @@ export const events: Event[] = [
     is_active: true
   },
   {
-    slug: 'junior-vs-senior',
-    name: 'Junior vs Senior Pool',
-    short_tagline: 'Experience meets Ambition.',
-    event_category: 'rivalry',
+    slug: 'freshers',
+    name: 'Freshers Chess',
+    short_tagline: 'The First Blood.',
+    event_category: 'freshers',
     visibility_rank: 6,
-    primary_color: '#e74c3c',
-    overview_richtext: '<p>A multi-board team match pitting the experienced seniors against the hungry juniors.</p>',
-    format_summary: '20-Board Team Match',
-    typical_time_control: '15+5',
+    primary_color: '#3498db',
+    overview_richtext: '<p>The ultimate proving ground for the newest batch of students. Unrated, chaotic, and completely unpredictable.</p>',
+    format_summary: 'Swiss System, 7 Rounds',
+    typical_time_control: '10+0',
     is_active: true
   },
   {
-    slug: 'inter-department',
-    name: 'Inter-Department Championship',
-    short_tagline: 'Settle the Score.',
-    event_category: 'department',
+    slug: 'bullet-championship',
+    name: 'Bullet Championship (Online)',
+    short_tagline: 'Instinct and Speed.',
+    event_category: 'freestyle',
     visibility_rank: 7,
-    primary_color: '#2ecc71',
-    overview_richtext: '<p>A brutal knockout tournament where university departments fight for ultimate bragging rights.</p>',
-    format_summary: 'Knockout Bracket',
-    typical_time_control: '10+2',
+    primary_color: '#e74c3c',
+    overview_richtext: '<p>Instinct, speed, and ruthless precision.</p>',
+    format_summary: 'Arena',
+    typical_time_control: '1+0',
+    is_active: true
+  },
+  {
+    slug: 'freestyle',
+    name: 'Freestyle Chess',
+    short_tagline: 'No memorised lines. Just chess.',
+    event_category: 'freestyle',
+    visibility_rank: 8,
+    primary_color: 'var(--accent-freestyle)',
+    overview_richtext: '<p>Chess960 format. Pure calculation and raw intuition.</p>',
+    format_summary: '32 players, Swiss + Knockout',
+    typical_time_control: '15+10',
     is_active: true
   }
 ];
 
 export const editions: EventEdition[] = [
+  // Olympiad
   {
-    slug: 'olympiad-2026',
+    slug: 'olympiad-2025',
     eventSlug: 'olympiad',
-    year: 2026,
-    title: 'Piper Chess Olympiad 2026',
-    start_date: '2026-03-01',
-    end_date: '2026-03-15',
+    year: 2025,
+    title: 'Chess Olympiad 2025',
+    start_date: '2025-09-26',
+    end_date: '2025-09-27',
     location: 'Main Hall',
     status: 'completed',
-    edition_intro: '<p>The most brutal Olympiad yet, with upsets in every round.</p>'
+    edition_intro: '',
+    heroIntro: "The title was earned over the board, not handed out. The 2025 Chess Olympiad stood as a testament to competitive resilience, demanding nothing less than absolute precision.",
+    overview: "Across two days of competition, teams battled for more than points—they played for standing. The 2025 Olympiad brought together established veterans and rising challengers in an atmosphere defined by intense calculation and strategic depth. In a field where a single inaccuracy could shatter championship aspirations, the eventual victors proved their mastery through unwavering focus.",
+    highlights: [
+      "High-stakes encounters dictated the shifting balance of power.",
+      "A relentless pace that tested stamina and tactical vision over two decisive days.",
+      "Unyielding defense and surgical offense characterized the leading boards."
+    ],
+    results: [
+      { rank: "Winner Team", names: ["Sayyed Abdul Hannan", "Ghulam Sarwar", "Feriha Akhtar"] },
+      { rank: "Runner Up", names: ["Sagnik Mittra", "Ali Israr", "Zavaibah"] },
+      { rank: "Third Place", names: ["Paras Sharma", "Arshad Ali", "Aqsa Tanzim"] },
+      { rank: "Fourth Place", names: ["Abdul Mughni", "Md Anas", "Inara"] }
+    ]
   },
   {
-    slug: 'womens-olympiad-2026',
-    eventSlug: 'womens-olympiad',
-    year: 2026,
-    title: 'Women\'s Olympiad 2026',
-    start_date: '2026-04-01',
-    end_date: '2026-04-10',
+    slug: 'olympiad-2024',
+    eventSlug: 'olympiad',
+    year: 2024,
+    title: 'Chess Olympiad 2024',
+    start_date: '2024-09-20',
+    end_date: '2024-09-22',
     location: 'Main Hall',
     status: 'completed',
-    edition_intro: '<p>A masterclass in positional play.</p>'
+    edition_intro: '',
+    heroIntro: "The 2024 Chess Olympiad gathered the finest minds of Piper Chess Club to determine who would secure the ultimate standard of supremacy. Every move mattered. Every board carried weight as legacies were forged.",
+    overview: "Spanning three rigorous days of competition, the 2024 Olympiad stood as the proving ground for Piper's elite. The tournament format pushed endurance and calculation to their absolute limits, leaving no room for complacency. It was not merely about winning individual games; it was about demonstrating unrelenting consistency on the grandest stage. Some tournaments fill calendars. This one builds reputations.",
+    highlights: [
+      "Three days of unforgiving competition separated the contenders from the champions.",
+      "Matches defined by immense pressure and narrow margins.",
+      "A definitive display of mastery by the titleholders."
+    ],
+    results: [
+      { rank: "Winners", names: ["Syed Mohammad Rayyan", "Md Aabid Hussain", "Shazia Fatima"] }
+    ]
+  },
+
+  // Women's Olympiad
+  {
+    slug: 'womens-olympiad-2025',
+    eventSlug: 'womens',
+    year: 2025,
+    title: 'Women\'s Chess Olympiad 2025',
+    start_date: '2025-11-14',
+    end_date: '2025-11-15',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "A definitive showcase of brilliance and tactical superiority. The 2025 Women's Chess Olympiad demanded unparalleled focus and delivered a masterclass in positional dominance.",
+    overview: "Played over a grueling two-day schedule, the 2025 Women's Olympiad served as the ultimate test of competitive caliber. The format required players to navigate immense pressure while maintaining strategic clarity. Every encounter reshaped the standings, culminating in a definitive victory that cemented the champions' place among Piper's finest.",
+    highlights: [
+      "Elite pairings that showcased deep theoretical preparation.",
+      "Critical moments where composure under pressure decided the ultimate outcome.",
+      "A commanding performance from the champions to secure the prestigious title."
+    ],
+    results: [
+      { rank: "Winner", names: ["Sabeela Khan", "Bushra Akram", "Aaliya Shoeb"] },
+      { rank: "Runner Up", names: ["Feriha Akhtar", "Tehseen", "Iqra Akhtar"] }
+    ]
+  },
+
+  // Inter Department Chess League
+  {
+    slug: 'inter-department-2026',
+    eventSlug: 'inter-department',
+    year: 2026,
+    title: 'Inter Department Chess League 2026',
+    start_date: '2026-02-06',
+    end_date: '2026-02-07',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "A fierce struggle for departmental supremacy. The 2026 Inter Department Chess League demanded strategic excellence from every board to claim the ultimate bragging rights.",
+    overview: "Returning with even higher stakes, the 2026 League tested the depth and resilience of every department. A single weakness on any board could be mercilessly exploited. Teams had to balance aggressive pursuit of points with rock-solid defense. In a field characterized by razor-thin margins, CSE emerged to reclaim the throne, while Electrical proved their formidable strength with two podium finishes.",
+    highlights: [
+      "Tactical masterclasses delivered under immense pressure.",
+      "CSE reclaimed the title in a display of calculated dominance.",
+      "Electrical demonstrated deep talent pools, securing both runner-up and third place."
+    ],
+    results: [
+      { rank: "Winner", department: "CSE", names: ["Sayyed Abdul Hannan", "Ghulam Sarwar", "Mohd Aarish Anwar"] },
+      { rank: "Runner Up", department: "Electrical", names: ["Md Ali Hasan", "Samad Raza", "Ali Israr"] },
+      { rank: "Third Place", department: "Electrical", names: ["Md Hamza Akhtar", "Samar Arquam", "Syed Abdullah"] }
+    ]
   },
   {
-    slug: 'freestyle-2026',
-    eventSlug: 'freestyle',
+    slug: 'inter-department-2025',
+    eventSlug: 'inter-department',
+    year: 2025,
+    title: 'Inter Department Chess League 2025',
+    start_date: '2025-02-07',
+    end_date: '2025-02-08',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "Departmental pride on the line, settled across the 64 squares. The 2025 Inter Department Chess League was a battlefield of intellectual rigor and collective ambition.",
+    overview: "The Inter Department Chess League transformed individual excellence into a collective mandate. Across two days of intense rivalry, teams representing different departments clashed to establish institutional dominance. The competition required not just individual brilliance, but cohesive team strategy to secure vital points. It was an arena where reputations were tested and departmental legacy was cemented.",
+    highlights: [
+      "Intense inter-departmental rivalries elevated the stakes of every match.",
+      "Electronics secured the championship through consistent, high-level execution.",
+      "CSE fielded multiple strong lineups, commanding two spots on the podium."
+    ],
+    results: [
+      { rank: "Winner", department: "Electronics", names: ["Md Affan Hussain", "Md Aabid Hussain", "Md Hamiz"] },
+      { rank: "Runner Up", department: "CSE", names: ["Md Arif Jamil", "Md Hamza", "Harsh Dahiya"] },
+      { rank: "Third Place", department: "CSE", names: ["Syed Muntuqua Karim", "Mohd Noman Khan", "Firoz Uddin Gauhar"] }
+    ]
+  },
+
+  // Piper Chess Championship
+  {
+    slug: 'piper-championship-2025',
+    eventSlug: 'piper-championship',
+    year: 2025,
+    title: 'Piper Chess Championship 2025',
+    start_date: '2025-10-10',
+    end_date: '2025-10-11',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "Where legends are minted and challengers fall. The 2025 Piper Chess Championship delivered a masterclass in competitive resilience and tactical brilliance.",
+    overview: "The 2025 edition of the Piper Chess Championship raised the standard of individual competition to new heights. Against a field of seasoned veterans and hungry challengers, survival required deep positional understanding and lethal attacking instincts. The championship matches were defined by tension and profound strategy, culminating in a shift of power at the highest echelons of Piper Chess Club.",
+    highlights: [
+      "A shift in the hierarchy as new champions emerged from a grueling field.",
+      "Md Affan Hussain claimed the overall victory with consistent brilliance.",
+      "Md Hamza Akhtar delivered a clutch performance to secure the Championship Match."
+    ],
+    results: [
+      { rank: "Winner", names: ["Md Affan Hussain"] },
+      { rank: "Runner Up", names: ["Md Arif Jamil"] },
+      { rank: "Championship Match Winner", names: ["Md Hamza Akhtar"] }
+    ]
+  },
+  {
+    slug: 'piper-championship-2024',
+    eventSlug: 'piper-championship',
+    year: 2024,
+    title: 'Piper Chess Championship 2024',
+    start_date: '2024-10-26',
+    end_date: '2024-10-27',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "The pinnacle of individual achievement. The 2024 Piper Chess Championship was an unforgiving crucible that crowned the undisputed master of the board.",
+    overview: "Reserved for the most ambitious contenders, the 2024 Piper Chess Championship was an exercise in pure individual excellence. With no team to fall back on, every player bore the full weight of their decisions. The grueling two-day format separated the contenders from the elite, demanding both flawless calculation and psychological resilience. It was a true test of who possessed the championship pedigree.",
+    highlights: [
+      "A punishing gauntlet that demanded absolute precision.",
+      "High-level opening preparation met with fierce middle-game complexities.",
+      "Hedayatullah Munib secured the title through unyielding focus and tactical superiority."
+    ],
+    results: [
+      { rank: "Winner", names: ["Hedayatullah Munib"] },
+      { rank: "Runner Up", names: ["Md Affan Hussain"] },
+      { rank: "Championship Match Winner", names: ["Hedayatullah Munib"] }
+    ]
+  },
+
+  // Candidates Tournament
+  {
+    slug: 'candidates-2026',
+    eventSlug: 'candidates',
     year: 2026,
-    title: 'Freestyle Chaos 2026',
-    start_date: '2026-05-01',
-    end_date: '2026-05-05',
-    location: 'Underground Studio',
-    status: 'ongoing',
-    edition_intro: '<p>Who needs opening prep?</p>'
+    title: 'Candidates Tournament 2026',
+    start_date: '2026-01-01',
+    end_date: '2026-01-01',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "A clash of tactical titans. The 2026 Candidates Tournament stripped away all margin for error, leaving only the most relentless competitors standing.",
+    overview: "The 2026 Candidates Tournament intensified the pressure, fielding a roster of players unwilling to yield a single inch of the board. The tournament was characterized by complex struggles and brilliant defensive stands. Paras Sharma navigated this minefield with surgical precision, claiming the title and proving his status among the club's absolute elite.",
+    highlights: [
+      "Brutal, protracted struggles that tested the limits of endurance.",
+      "Paras Sharma navigated the complex field to emerge victorious.",
+      "Narrow margins defined the difference between advancement and elimination."
+    ],
+    results: [
+      { rank: "Winner", names: ["Paras Sharma"] },
+      { rank: "Runner Up", names: ["Md Hamza Akhtar"] }
+    ]
+  },
+  {
+    slug: 'candidates-2025',
+    eventSlug: 'candidates',
+    year: 2025,
+    title: 'Candidates Tournament 2025',
+    start_date: '2025-01-01',
+    end_date: '2025-01-01',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "The ultimate proving ground for the elite. The 2025 Candidates Tournament was a high-stakes battle to earn the right to challenge for supremacy.",
+    overview: "Designed to identify the absolute best among the elite, the 2025 Candidates Tournament was a tournament of pure attrition. Only those with unbreakable focus and profound theoretical knowledge could survive this gauntlet. Every match carried the weight of championship aspirations, demanding aggressive yet calculated play to secure the coveted top position.",
+    highlights: [
+      "A masterclass in high-stakes, uncompromising chess.",
+      "Md Affan Hussain demonstrated exceptional resilience to secure the victory.",
+      "A definitive display of strength that silenced any doubters."
+    ],
+    results: [
+      { rank: "Winner", names: ["Md Affan Hussain"] },
+      { rank: "Runner Up", names: ["Ahmadullah Khan"] }
+    ]
+  },
+
+  // Freshers Chess
+  {
+    slug: 'freshers-2025',
+    eventSlug: 'freshers',
+    year: 2025,
+    title: 'Freshers Chess 2025',
+    start_date: '2025-01-01',
+    end_date: '2025-01-01',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "New challengers, same unforgiving standard. The 2025 Freshers Chess tournament demanded immediate excellence from the newest additions to the club.",
+    overview: "The 2025 edition of Freshers Chess showcased a deep pool of emerging talent, hungry to prove their worth on the board. The level of play demonstrated sophisticated preparation and a refusal to back down from complex positions. Paras Sharma rose above the competition, signaling his arrival as a serious force within Piper Chess Club.",
+    highlights: [
+      "A high standard of play that challenged established club veterans to take notice.",
+      "Paras Sharma claimed victory through decisive, uncompromising play.",
+      "The tournament cemented the competitive pedigree of the new generation."
+    ],
+    results: [
+      { rank: "Winner", names: ["Paras Sharma"] },
+      { rank: "Runner Up", names: ["Sagnik Mittra"] }
+    ]
+  },
+  {
+    slug: 'freshers-2024',
+    eventSlug: 'freshers',
+    year: 2024,
+    title: 'Freshers Chess 2024',
+    start_date: '2024-01-01',
+    end_date: '2024-01-01',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "The arrival of a new generation. The 2024 Freshers Chess tournament was the first battleground for new talent to stake their claim and build a reputation.",
+    overview: "Serving as the definitive introduction to Piper's competitive landscape, the 2024 Freshers Chess tournament was a display of raw talent and fearless ambition. Unburdened by past expectations, the competitors played with aggressive intent, seeking to establish themselves immediately as formidable opponents. It was the genesis of future rivalries and the first step toward long-term legacy.",
+    highlights: [
+      "Unpredictable, dynamic chess characterized by aggressive tactics.",
+      "Shameel Khan delivered a commanding performance to secure the inaugural title.",
+      "A powerful statement of intent from the incoming class of players."
+    ],
+    results: [
+      { rank: "Winner", names: ["Shameel Khan"] },
+      { rank: "Runner Up", names: ["Fahad Manzoor"] }
+    ]
+  },
+
+  // Bullet Championship
+  {
+    slug: 'bullet-championship-2025',
+    eventSlug: 'bullet-championship',
+    year: 2025,
+    title: 'Bullet Championship 2025',
+    start_date: '2025-01-01',
+    end_date: '2025-01-01',
+    location: 'Online',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "A crucible of milliseconds. The 2025 Bullet Championship demanded unparalleled reflexes and absolute mental clarity.",
+    overview: "The 2025 Bullet Championship continued the tradition of relentless, high-speed combat. Competitors faced a barrage of rapid-fire decisions, where flagging was just as lethal as a blunder. Md Hamza Akhtar thrived in the chaos, combining lightning-fast execution with deadly accuracy to secure the championship.",
+    highlights: [
+      "Unforgiving time scrambles that tested nerves and tactical vision.",
+      "Md Hamza Akhtar claimed the title with lethal speed and precision.",
+      "A masterclass in maintaining composure while racing the clock."
+    ],
+    results: [
+      { rank: "Winner", names: ["Md Hamza Akhtar"] }
+    ]
+  },
+  {
+    slug: 'bullet-championship-2024',
+    eventSlug: 'bullet-championship',
+    year: 2024,
+    title: 'Bullet Championship 2024',
+    start_date: '2024-01-01',
+    end_date: '2024-01-01',
+    location: 'Online',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "Instinct, speed, and ruthless precision. The 2024 Bullet Championship was an adrenaline-fueled arena where hesitation meant instant defeat.",
+    overview: "Stripping away the luxury of time, the 2024 Bullet Championship tested pure intuition and reflexive calculation. In a format where every fraction of a second dictated the outcome, players had to rely on ingrained patterns and sheer nerve. It was a chaotic yet brilliant display of tactical awareness under the most extreme time pressure possible.",
+    highlights: [
+      "Blistering pace that punished even the slightest moment of indecision.",
+      "Syed Mohammad Rayyan dominated the field with unmatched speed and tactical sharpness.",
+      "A true test of instinctual chess mastery."
+    ],
+    results: [
+      { rank: "Winner", names: ["Syed Mohammad Rayyan"] }
+    ]
   }
 ];
 
@@ -175,16 +456,16 @@ export const mockBrackets: KnockoutBracket[] = [
 export const legacyEntries: LegacyEntry[] = [
   {
     id: 'l1',
-    year: 2024,
-    title: 'The Great Resurgence',
-    description: 'Piper Chess Club transitions from a casual meetup to a competitive powerhouse.',
-    type: 'milestone'
+    year: 2025,
+    title: 'Olympiad 2025',
+    description: 'The Knights of CS secure their first ever Olympiad victory in a thrilling finale.',
+    type: 'memorable_event'
   },
   {
     id: 'l2',
-    year: 2025,
-    title: 'First Freestyle Tournament',
-    description: 'Introducing Chess960 to the competitive ecosystem, breaking opening prep dependency.',
-    type: 'memorable_event'
+    year: 2024,
+    title: 'Olympiad 2024',
+    description: 'Inaugural Piper Chess Olympiad sets a new standard for competitive chess on campus.',
+    type: 'milestone'
   }
 ];

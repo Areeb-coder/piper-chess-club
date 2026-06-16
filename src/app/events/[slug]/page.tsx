@@ -1,18 +1,18 @@
-import { getEventBySlug, getLatestEdition, getGroupsForEdition, getBracketsForEdition } from '@/lib/cms/api';
+import { getEventBySlug, getLatestEdition, getEventEditions } from '@/lib/cms/api';
 import { notFound } from 'next/navigation';
 import { HeroScene } from '@/components/cinematic/HeroScene';
 import { ScrollScene } from '@/components/cinematic/ScrollScene';
 import { EventMetaBar } from '@/components/events/EventMetaBar';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
-import { EventTabs } from '@/components/events/EventTabs';
+import { EventTimeline } from '@/components/events/EventTimeline';
 
-export default function EventPage({ params }: { params: { slug: string } }) {
-  const event = getEventBySlug(params.slug);
+export default async function EventPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const event = getEventBySlug(resolvedParams.slug);
   if (!event) return notFound();
 
   const latestEdition = getLatestEdition(event.slug);
-  const groups = latestEdition ? getGroupsForEdition(latestEdition.slug) : [];
-  const brackets = latestEdition ? getBracketsForEdition(latestEdition.slug) : [];
+  const editions = getEventEditions(event.slug);
 
   return (
     <div>
@@ -29,27 +29,23 @@ export default function EventPage({ params }: { params: { slug: string } }) {
           <EventMetaBar 
             format={event.format_summary} 
             timeControl={event.typical_time_control} 
-            location={latestEdition?.location} 
             status={latestEdition?.status} 
           />
-
-          <EventTabs overviewHtml={event.overview_richtext} groups={groups} brackets={brackets} />
+          
+          <div className="mt-12 mb-8">
+            <h2 className="section-title text-center mb-8">Event Overview</h2>
+            <div 
+              className="text-muted leading-relaxed text-lg max-w-3xl mx-auto text-center"
+              dangerouslySetInnerHTML={{ __html: event.overview_richtext }} 
+            />
+          </div>
+          
+          <div className="mt-20">
+            <h2 className="section-title text-center mb-12">Championship History</h2>
+            <EventTimeline editions={editions} />
+          </div>
         </section>
       </ScrollScene>
-
-      {latestEdition && (
-        <ScrollScene>
-          <section className="section-padding max-w-5xl mx-auto">
-            <h2 className="section-title">Latest Edition: {latestEdition.title}</h2>
-            <div className="glass-panel p-8 text-center">
-              <div dangerouslySetInnerHTML={{ __html: latestEdition.edition_intro }} className="mb-4" />
-              <div className="mt-4 text-muted font-bold">
-                {latestEdition.start_date} &ndash; {latestEdition.end_date} <br/> {latestEdition.location}
-              </div>
-            </div>
-          </section>
-        </ScrollScene>
-      )}
     </div>
   );
 }
