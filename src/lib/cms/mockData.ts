@@ -401,6 +401,32 @@ export const editions: EventEdition[] = [
     results: [
       { rank: "Winner", names: ["Syed Mohammad Rayyan"] }
     ]
+  },
+  
+  // Freestyle Chess
+  {
+    slug: 'freestyle-2026',
+    eventSlug: 'freestyle',
+    year: 2026,
+    title: 'Freestyle Chess 2026',
+    start_date: '2026-03-27',
+    end_date: '2026-03-27',
+    location: 'Main Hall',
+    status: 'completed',
+    edition_intro: '',
+    heroIntro: "No memorised lines. Just chess. The 2026 Freestyle Chess tournament tested pure calculation and raw intuition.",
+    overview: "In a format where opening preparation means nothing, the 2026 Freestyle Chess tournament forced players to rely entirely on their understanding of chess principles and tactical vision from move one. Mohd Hasan demonstrated exceptional adaptability and creativity to claim the title.",
+    highlights: [
+      "A true test of raw chess ability without the safety net of opening theory.",
+      "Mohd Hasan claimed victory with brilliant improvisational play.",
+      "Creative and chaotic positions from the very first move."
+    ],
+    results: [
+      { rank: "Winner", names: ["Mohd Hasan"] },
+      { rank: "Runner Up", names: ["Zahid"] },
+      { rank: "Third Place", names: ["Arif Jameel"] },
+      { rank: "Fourth Place", names: ["Affan Hussain"] }
+    ]
   }
 ];
 
