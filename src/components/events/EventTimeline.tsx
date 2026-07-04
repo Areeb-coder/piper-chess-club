@@ -5,6 +5,8 @@ import { EventEdition } from '@/lib/cms/types';
 import { ScrollReveal } from '../cinematic/ScrollReveal';
 import { WinnerCard } from './WinnerCard';
 import { LeaderboardCard } from './LeaderboardCard';
+import { EventPoster } from './EventPoster';
+import { EventGallery } from './EventGallery';
 import styles from './EventTimeline.module.css';
 
 interface EventTimelineProps {
@@ -29,7 +31,7 @@ export const EventTimeline: React.FC<EventTimelineProps> = ({ editions }) => {
                 <div className={styles.yearLine} />
                 <h2 className={styles.yearMarker}>{edition.year}</h2>
               </div>
-              
+
               <div className={styles.contentGrid}>
                 {/* Left Column: Story */}
                 <div className={styles.storyColumn}>
@@ -39,7 +41,7 @@ export const EventTimeline: React.FC<EventTimelineProps> = ({ editions }) => {
                   {edition.overview && (
                     <p className={styles.overview}>{edition.overview}</p>
                   )}
-                  
+
                   {edition.highlights && edition.highlights.length > 0 && (
                     <div className={styles.highlights}>
                       <h4 className={styles.highlightsTitle}>Key Highlights</h4>
@@ -61,7 +63,7 @@ export const EventTimeline: React.FC<EventTimelineProps> = ({ editions }) => {
                 <div className={styles.resultsColumn}>
                   {winnerResult && (
                     <div className={styles.winnerWrapper}>
-                      <WinnerCard 
+                      <WinnerCard
                         rank={winnerResult.rank}
                         names={winnerResult.names}
                         department={winnerResult.department}
@@ -69,20 +71,39 @@ export const EventTimeline: React.FC<EventTimelineProps> = ({ editions }) => {
                       />
                     </div>
                   )}
-                  
+
                   {otherResults && (
                     <div className={styles.leaderboardWrapper}>
                       <LeaderboardCard results={otherResults} />
                     </div>
                   )}
 
-                  {/* Placeholders for photos and gallery as requested */}
-                  <div className={styles.mediaPlaceholders}>
-                    <div className={styles.placeholderCard}>
-                      <span>[ Event Poster ]</span>
+                  {/* Media (Poster and Gallery Widgets) */}
+                  <div className={styles.mediaContainer}>
+                    <div className={styles.widgetWrapper}>
+                      <h4 className={styles.widgetLabel}>EVENT GALLERY</h4>
+                      {edition.galleryUrls && edition.galleryUrls.length > 0 ? (
+                        <EventGallery urls={edition.galleryUrls} />
+                      ) : (
+                        <div className={styles.placeholderCard}>
+                          <span className={styles.placeholderIcon}>📷</span>
+                          <span className={styles.placeholderTitle}>Event Gallery</span>
+                          <span className={styles.placeholderText}>Event photographs will appear here once they are added.</span>
+                        </div>
+                      )}
                     </div>
-                    <div className={styles.placeholderCard}>
-                      <span>[ Match Gallery ]</span>
+                    
+                    <div className={styles.widgetWrapper}>
+                      <h4 className={styles.widgetLabel}>EVENT POSTER</h4>
+                      {edition.posterUrl ? (
+                        <EventPoster url={edition.posterUrl} />
+                      ) : (
+                        <div className={styles.placeholderCard}>
+                          <span className={styles.placeholderIcon}>🖼️</span>
+                          <span className={styles.placeholderTitle}>Event Poster</span>
+                          <span className={styles.placeholderText}>The official event poster will appear here.</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

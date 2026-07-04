@@ -39,6 +39,8 @@ export interface EventEdition {
   overview?: string;
   highlights?: string[];
   results?: EventResult[];
+  posterUrl?: string;
+  galleryUrls?: string[];
 }
 
 export interface Team {

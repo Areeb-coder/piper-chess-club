@@ -41,6 +41,8 @@
   background: linear-gradient(to bottom right, #ffffff, #a1a1aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
 }
 
 .mobileBreak {
