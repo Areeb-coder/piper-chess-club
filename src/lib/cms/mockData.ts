@@ -230,7 +230,8 @@ export const editions: EventEdition[] = [
           "Iqra Akhtar"
         ]
       }
-    ]
+    ],
+    "posterUrl": "/media/events/womens/2025/poster/Poster 2025.jpeg"
   },
   {
     "slug": "inter-department-2026",
@@ -277,6 +278,10 @@ export const editions: EventEdition[] = [
           "Syed Abdullah"
         ]
       }
+    ],
+    "galleryUrls": [
+      "/media/events/inter-department/2026/photos/photo1.jpg",
+      "/media/events/inter-department/2026/photos/photo2.jpg"
     ]
   },
   {
@@ -324,6 +329,13 @@ export const editions: EventEdition[] = [
           "Firoz Uddin Gauhar"
         ]
       }
+    ],
+    "galleryUrls": [
+      "/media/events/inter-department/2025/photos/photo1.jpg",
+      "/media/events/inter-department/2025/photos/photo2.jpg",
+      "/media/events/inter-department/2025/photos/photo3.jpg",
+      "/media/events/inter-department/2025/photos/photo4.jpg",
+      "/media/events/inter-department/2025/photos/photo5.jpg"
     ]
   },
   {
@@ -685,25 +697,6 @@ export const editions: EventEdition[] = [
       "/media/events/senior-and-junior-pool/2025/photos/3rd.jpg",
       "/media/events/senior-and-junior-pool/2025/photos/4th.jpg"
     ]
-  },
-  {
-    "slug": "womens-2025",
-    "eventSlug": "womens",
-    "year": 2025,
-    "title": "Women's Chess Olympiad 2025",
-    "start_date": "2025-01-01",
-    "end_date": "2025-01-01",
-    "location": "Main Hall",
-    "status": "completed",
-    "edition_intro": "",
-    "heroIntro": "The 2025 edition of Women's Chess Olympiad.",
-    "overview": "An incredible display of skill at the 2025 Women's Chess Olympiad.",
-    "highlights": [
-      "Exciting matches.",
-      "Great sportsmanship."
-    ],
-    "results": [],
-    "posterUrl": "/media/events/womens/2025/poster/Poster 2025.jpeg"
   }
 ];
 
