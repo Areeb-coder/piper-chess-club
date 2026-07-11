@@ -39,7 +39,7 @@ const events = [
 
 export const EventShowcase = () => {
   return (
-    <div className={styles.grid}>
+    <div className={`${styles.grid} event-grid-override`}>
       {events.map((event, index) => (
         <motion.div
           key={event.id}

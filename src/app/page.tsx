@@ -10,8 +10,8 @@ export default function Home() {
     <div className={styles.homeContainer}>
       {/* 1. Hero */}
       <HeroScene 
-        headline="EVERY MOVE MATTERS" 
-        subheadline="WHERE STRATEGY BECOMES LEGACY."
+        headline={"EVERY MOVE\nMATTERS"} 
+        subheadline="Where strategy becomes legacy."
       >
         <Link href="/events" className="btn-primary">Explore Events</Link>
         <Link href="/community" className="btn-secondary">Join the Club</Link>
@@ -69,9 +69,9 @@ export default function Home() {
           <p className="text-muted max-w-2xl mx-auto mt-4 mb-8 text-xl">
             Your name could be etched in the Hall of Fame. Or you could just watch.
           </p>
-          <div className="flex-center gap-4">
-            <Link href="/hall-of-fame" className="btn-secondary" style={{ padding: '1rem 2rem' }}>Enter the Hall of Fame</Link>
-            <Link href="/community" className="btn-primary" style={{ padding: '1rem 2rem' }}>Claim Your Seat</Link>
+          <div className="flex-center gap-4" style={{ flexWrap: 'wrap' }}>
+            <Link href="/hall-of-fame" className="btn-secondary" style={{ padding: '1rem 2rem', width: '100%', maxWidth: '300px' }}>Enter the Hall of Fame</Link>
+            <Link href="/community" className="btn-primary" style={{ padding: '1rem 2rem', width: '100%', maxWidth: '300px' }}>Claim Your Seat</Link>
           </div>
         </ScrollReveal>
       </section>

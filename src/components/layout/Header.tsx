@@ -9,15 +9,17 @@ export const Header = () => {
       <div className={styles.logo}>
         <Link href="/">Piper Chess</Link>
       </div>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} hidden md-flex`}>
         <Link href="/events">Events</Link>
         <Link href="/legacy">Legacy</Link>
-        <Link href="/team" className="hidden md:inline-block">Team</Link>
-        <div className="hidden md:block">
+        <Link href="/team">Team</Link>
+        <div>
           <Link href="/community" className="btn-primary text-sm px-4 py-2">Join</Link>
         </div>
       </nav>
-      <MobileNav />
+      <div className="md-hidden">
+        <MobileNav />
+      </div>
     </header>
   );
 };

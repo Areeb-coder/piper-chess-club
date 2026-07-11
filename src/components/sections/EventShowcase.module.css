@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -79,4 +79,12 @@
 
 .eventCard:hover .line {
   transform: scaleX(1.1);
+}
+
+@media (max-width: 768px) {
+  /* Bypass Framer Motion viewport bugs on older mobile browsers */
+  :global(.event-grid-override) > div {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

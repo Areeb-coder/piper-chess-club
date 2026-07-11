@@ -12,9 +12,9 @@ export default function CommunityPage() {
             We meet weekly for casual games, blitz spars, and tournament prep.
           </p>
           
-          <div className="flex-center gap-4">
-            <a href="https://chat.whatsapp.com/H68FHr8X6Y8AJLnMYoccwE" target="_blank" rel="noopener noreferrer" className="btn-primary">WhatsApp Group</a>
-            <a href="https://www.chess.com/club/piper-chess-club/join" target="_blank" rel="noopener noreferrer" className="btn-secondary">Chess.com Community</a>
+          <div className="flex-center gap-4" style={{ flexWrap: 'wrap' }}>
+            <a href="https://chat.whatsapp.com/H68FHr8X6Y8AJLnMYoccwE" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: '100%', maxWidth: '300px' }}>WhatsApp Group</a>
+            <a href="https://www.chess.com/club/piper-chess-club/join" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ width: '100%', maxWidth: '300px' }}>Chess.com Community</a>
           </div>
         </div>
       </ScrollScene>

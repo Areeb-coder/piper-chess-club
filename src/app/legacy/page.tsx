@@ -13,7 +13,7 @@ export default function LegacyPage() {
         {entries.map(entry => (
           <ScrollScene key={entry.id}>
             <GlassCard>
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center mb-2" style={{ flexWrap: 'wrap', gap: '0.5rem' }}>
                 <h3 className="text-xl font-bold">{entry.title}</h3>
                 <span className="text-accent-gold font-display font-bold text-lg">{entry.year}</span>
               </div>

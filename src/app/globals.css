@@ -25,6 +25,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -142,3 +143,58 @@ a {
 .font-display { font-family: var(--font-display); }
 .text-accent-gold { color: var(--accent-gold); }
 .leading-relaxed { line-height: 1.6; }
+
+/* Responsive Grid Utilities */
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* Responsive Utilities */
+.hidden { display: none !important; }
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.flex-item { display: flex !important; }
+
+/* Desktop overrides (md:) >= 768px */
+@media (min-width: 768px) {
+  .md-hidden { display: none !important; }
+  .md-block { display: block !important; }
+  .md-inline-block { display: inline-block !important; }
+  .md-flex { display: flex !important; }
+  
+  .md-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* Tablet / Desktop overrides (lg:) >= 1024px */
+@media (min-width: 1024px) {
+  .lg-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* Mobile responsive typography and layout adjustments */
+@media (max-width: 767px) {
+  .section-padding { padding: 4rem 1rem; }
+  .section-title { font-size: 2rem; margin-bottom: 2rem; }
+  .text-lg { font-size: 1rem; }
+  .text-xl { font-size: 1.125rem; }
+  
+  .stats-grid { gap: 1rem; }
+  .event-bento { gap: 1rem; }
+  
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 2rem !important; }
+  h3 { font-size: 1.5rem !important; }
+}
+
+@media (max-width: 480px) {
+  .section-padding { padding: 3rem 1rem; }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  
+  .stats-grid, .event-bento {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,9 +1,9 @@
 .backgroundContainer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  inset: 0;
+  width: 100%;
   height: 100vh;
+  height: 100dvh;
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
@@ -38,10 +38,10 @@
 /* Faint chessboard grid emerging from darkness */
 .gridLayer {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  inset: 0;
+  width: 100%;
   height: 100vh;
+  height: 100dvh;
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -80,10 +80,10 @@
 .trail:nth-child(3) { left: 80%; animation: trailMove 10s infinite 7s; }
 
 @keyframes trailMove {
-  0% { transform: translateY(-100vh); opacity: 0; }
+  0% { transform: translateY(-100vh); transform: translateY(-100dvh); opacity: 0; }
   10% { opacity: 1; }
-  50% { transform: translateY(100vh); opacity: 0; }
-  100% { transform: translateY(100vh); opacity: 0; }
+  50% { transform: translateY(100vh); transform: translateY(100dvh); opacity: 0; }
+  100% { transform: translateY(100vh); transform: translateY(100dvh); opacity: 0; }
 }
 
 /* Ghostly moves */
@@ -137,6 +137,12 @@
     90vw 50vh #fff, 95vw 85vh #fff, 15vw 15vh #F5B041, 65vw 55vh #F5B041,
     25vw 25vh #fff, 35vw 75vh #fff, 45vw 15vh #fff, 55vw 85vh #fff,
     75vw 45vh #fff, 85vw 25vh #fff, 5vw 95vh #fff, 8vw 5vh #fff;
+  box-shadow: 
+    10vw 20dvh #fff, 20vw 80dvh #fff, 30vw 40dvh #fff, 40vw 60dvh #fff, 
+    50vw 10dvh #fff, 60vw 90dvh #fff, 70vw 30dvh #fff, 80vw 70dvh #fff, 
+    90vw 50dvh #fff, 95vw 85dvh #fff, 15vw 15dvh #F5B041, 65vw 55dvh #F5B041,
+    25vw 25dvh #fff, 35vw 75dvh #fff, 45vw 15dvh #fff, 55vw 85dvh #fff,
+    75vw 45dvh #fff, 85vw 25dvh #fff, 5vw 95dvh #fff, 8vw 5dvh #fff;
   border-radius: 50%;
   opacity: 0.4;
   animation: dustFloat 30s linear infinite;
@@ -149,13 +155,17 @@
     12vw 88vh #fff, 22vw 12vh #fff, 32vw 68vh #fff, 42vw 32vh #fff, 
     52vw 78vh #F5B041, 62vw 22vh #fff, 72vw 58vh #fff, 82vw 42vh #fff, 
     92vw 98vh #fff, 98vw 2vh #fff;
+  box-shadow: 
+    12vw 88dvh #fff, 22vw 12dvh #fff, 32vw 68dvh #fff, 42vw 32dvh #fff, 
+    52vw 78dvh #F5B041, 62vw 22dvh #fff, 72vw 58dvh #fff, 82vw 42dvh #fff, 
+    92vw 98dvh #fff, 98vw 2dvh #fff;
   animation: dustFloat 40s linear infinite reverse;
   opacity: 0.2;
 }
 
 @keyframes dustFloat {
   0% { transform: translateY(0) translateX(0); }
-  100% { transform: translateY(-100vh) translateX(5vw); }
+  100% { transform: translateY(-100vh) translateX(5vw); transform: translateY(-100dvh) translateX(5vw); }
 }
 
 .darkOverlay {

@@ -1,31 +1,85 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import styles from './MobileNav.module.css';
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent scroll when drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="md:hidden flex items-center">
+    <>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 z-50 relative"
+        className={styles.hamburgerBtn}
         aria-label="Toggle Menu"
       >
-        <span className={`block w-6 h-0.5 bg-white transition-all ${isOpen ? 'rotate-45 translate-y-2' : 'mb-1.5'}`}></span>
-        <span className={`block w-6 h-0.5 bg-white transition-all ${isOpen ? 'opacity-0' : 'mb-1.5'}`}></span>
-        <span className={`block w-6 h-0.5 bg-white transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        <span className={styles.line} style={{ transform: isOpen ? 'rotate(45deg) translateY(6px) translateX(5px)' : 'none' }}></span>
+        <span className={styles.line} style={{ opacity: isOpen ? 0 : 1 }}></span>
+        <span className={styles.line} style={{ transform: isOpen ? 'rotate(-45deg) translateY(-6px) translateX(5px)' : 'none' }}></span>
       </button>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/90 backdrop-blur-xl flex flex-col justify-center items-center gap-8">
-          <Link href="/" onClick={() => setIsOpen(false)} className="text-2xl font-display uppercase tracking-widest hover:text-accent-gold transition-colors">Home</Link>
-          <Link href="/events" onClick={() => setIsOpen(false)} className="text-2xl font-display uppercase tracking-widest hover:text-accent-gold transition-colors">Events</Link>
-          <Link href="/legacy" onClick={() => setIsOpen(false)} className="text-2xl font-display uppercase tracking-widest hover:text-accent-gold transition-colors">Legacy</Link>
-          <Link href="/team" onClick={() => setIsOpen(false)} className="text-2xl font-display uppercase tracking-widest hover:text-accent-gold transition-colors">Team</Link>
-          <Link href="/community" onClick={() => setIsOpen(false)} className="text-2xl font-display uppercase tracking-widest hover:text-accent-gold transition-colors">Join</Link>
-        </div>
-      )}
-    </div>
+      <AnimatePresence>
+        {isOpen && mounted && createPortal(
+          <>
+            <motion.div 
+              className={styles.overlay}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={closeMenu}
+            />
+            
+            <motion.div 
+              className={styles.drawer}
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.1}
+              onDragEnd={(e, { offset, velocity }) => {
+                if (offset.x > 100 || velocity.x > 500) {
+                  closeMenu();
+                }
+              }}
+            >
+              <div className={styles.navLinks}>
+                <Link href="/" onClick={closeMenu} className={styles.navLink}>Home</Link>
+                <Link href="/events" onClick={closeMenu} className={styles.navLink}>Events</Link>
+                <Link href="/legacy" onClick={closeMenu} className={styles.navLink}>Legacy</Link>
+                <Link href="/team" onClick={closeMenu} className={styles.navLink}>Team</Link>
+                <div className={styles.joinBtn}>
+                  <Link href="/community" onClick={closeMenu} className="btn-primary" style={{ display: 'block', width: '100%' }}>Join</Link>
+                </div>
+              </div>
+            </motion.div>
+          </>,
+          document.body
+        )}
+      </AnimatePresence>
+    </>
   );
 };

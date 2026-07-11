@@ -59,6 +59,8 @@
   flex: 1;
   color: var(--text-main);
   font-weight: 500;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .separator {

@@ -9,6 +9,13 @@
   z-index: 100;
 }
 
+@media (max-width: 767px) {
+  .header {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 1rem;
+  }
+}
+
 .logo {
   font-family: var(--font-display);
   font-weight: 700;

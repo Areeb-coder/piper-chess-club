@@ -11,6 +11,12 @@
   border: 1px solid var(--glass-border);
 }
 
+@media (max-width: 767px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
 .overallWinner {
   border-color: rgba(212, 175, 55, 0.4);
   box-shadow: inset 0 0 40px rgba(212, 175, 55, 0.05);
@@ -53,6 +59,12 @@
   color: var(--text-main);
   margin: 0;
   line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .winnerName {
+    font-size: 1.25rem;
+  }
 }
 
 .glowEffect {

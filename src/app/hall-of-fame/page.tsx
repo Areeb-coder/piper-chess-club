@@ -24,11 +24,13 @@ export default function HallOfFamePage() {
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'space-between',
-                padding: '2rem',
+                padding: 'clamp(1rem, 5vw, 2rem)',
                 borderBottom: '1px solid var(--glass-border)',
                 transition: 'background 0.3s ease',
+                flexWrap: 'wrap',
+                gap: '1rem'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(1rem, 5vw, 2rem)' }}>
                   <span style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--accent-gold)', fontWeight: 700 }}>{champ.year}</span>
                   <div>
                     <h3 style={{ fontSize: '1.5rem', margin: 0, color: 'var(--text-main)', fontFamily: 'var(--font-display)' }}>{champ.name}</h3>

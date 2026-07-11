@@ -74,6 +74,7 @@
   width: 100%;
   max-width: 1200px;
   height: 85vh;
+  height: 85dvh;
   background: transparent;
   border-radius: 12px;
   display: flex;

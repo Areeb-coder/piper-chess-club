@@ -19,7 +19,7 @@ export default function TeamPage() {
 
       <section className="section-padding max-w-5xl mx-auto">
         <ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+          <div className="stats-grid grid-cols-1 md-grid-cols-2 lg-grid-cols-4">
             {team.map((member, index) => (
               <GlassCard key={index} className="text-center" style={{ padding: '3rem 2rem' }}>
                 <div style={{ 
