@@ -23,9 +23,10 @@ export const ScrollScene = ({ children, animation = 'slide-up' }: ScrollScenePro
 
   return (
     <motion.div 
+      className="scroll-scene-mobile-fix"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, amount: 0.05 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       variants={getVariants()}
     >

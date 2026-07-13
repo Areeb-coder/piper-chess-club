@@ -24,7 +24,6 @@ body {
   font-family: var(--font-sans);
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100%;
   -webkit-font-smoothing: antialiased;
 }
@@ -177,22 +176,29 @@ a {
 /* Mobile responsive typography and layout adjustments */
 @media (max-width: 767px) {
   .section-padding { padding: 4rem 1rem; }
-  .section-title { font-size: 2rem; margin-bottom: 2rem; }
+  .section-title { font-size: 3rem !important; margin-bottom: 2rem; }
   .text-lg { font-size: 1rem; }
   .text-xl { font-size: 1.125rem; }
   
   .stats-grid { gap: 1rem; }
   .event-bento { gap: 1rem; }
   
-  h1 { font-size: 2.5rem !important; }
-  h2 { font-size: 2rem !important; }
-  h3 { font-size: 1.5rem !important; }
+  h1 { font-size: 3.5rem !important; }
+  h2 { font-size: 2.5rem !important; }
+  h3 { font-size: 1.75rem !important; }
+  
+  /* Force ScrollScene visibility on mobile to prevent missing content */
+  .scroll-scene-mobile-fix {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @media (max-width: 480px) {
   .section-padding { padding: 3rem 1rem; }
-  h1 { font-size: 2rem !important; }
-  h2 { font-size: 1.75rem !important; }
+  .section-title { font-size: 2.75rem !important; margin-bottom: 1.5rem; }
+  h1 { font-size: 3rem !important; }
+  h2 { font-size: 2.25rem !important; }
   
   .stats-grid, .event-bento {
     grid-template-columns: 1fr;

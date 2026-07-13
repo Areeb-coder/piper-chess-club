@@ -39,14 +39,14 @@
 
 @media (max-width: 768px) {
   .hero {
-    /* Move content slightly upward for portrait view */
+    /* Move content slightly upward for portrait view, but leave space for header */
     align-items: center;
-    padding-bottom: 25vh; 
+    padding-bottom: 10vh; 
   }
 
   .headline {
     /* Fluid typography matching desktop proportions but scaled for mobile */
-    font-size: clamp(3.5rem, 15vw, 6rem); 
+    font-size: clamp(4.5rem, 20vw, 7rem); 
     max-width: 100%;
     margin: 0 auto;
     line-height: 0.9;

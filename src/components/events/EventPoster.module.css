@@ -15,6 +15,8 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+
+
 .posterImage {
   object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -55,6 +57,8 @@
 .posterWrapper:hover .viewText {
   transform: translateY(0);
 }
+
+
 
 /* Lightbox Styles */
 .lightbox {
@@ -115,6 +119,7 @@
 .lightboxImage {
   object-fit: contain;
 }
+
 
 @media (min-width: 768px) {
   .posterWrapper {

@@ -6,7 +6,7 @@
   margin: 1rem 2rem;
   position: sticky;
   top: 1rem;
-  z-index: 100;
+  z-index: 160;
 }
 
 @media (max-width: 767px) {

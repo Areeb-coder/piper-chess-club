@@ -17,19 +17,19 @@ function AbstractKing({ isMobile, ...props }: any) {
         <group>
           <mesh position={[0, 0, 0]}>
             <cylinderGeometry args={[0.8, 1, 3, 32]} />
-            <meshStandardMaterial color="#ffffff" metalness={isMobile ? 0.7 : 0.9} roughness={isMobile ? 0.2 : 0.1} envMapIntensity={1} />
+            <meshStandardMaterial color="#ffffff" metalness={0.9} roughness={0.1} envMapIntensity={1} />
           </mesh>
           <mesh position={[0, 1.8, 0]}>
             <sphereGeometry args={[0.5, 32, 32]} />
-            <meshStandardMaterial color="#D4AF37" metalness={isMobile ? 0.8 : 1} roughness={isMobile ? 0.2 : 0.2} envMapIntensity={2} />
+            <meshStandardMaterial color="#D4AF37" metalness={1} roughness={0.2} envMapIntensity={2} />
           </mesh>
           <mesh position={[0, 2.5, 0]}>
             <boxGeometry args={[0.2, 0.6, 0.2]} />
-            <meshStandardMaterial color="#D4AF37" metalness={isMobile ? 0.8 : 1} roughness={isMobile ? 0.2 : 0.2} />
+            <meshStandardMaterial color="#D4AF37" metalness={1} roughness={0.2} />
           </mesh>
           <mesh position={[0, 2.5, 0]}>
             <boxGeometry args={[0.6, 0.2, 0.2]} />
-            <meshStandardMaterial color="#D4AF37" metalness={isMobile ? 0.8 : 1} roughness={isMobile ? 0.2 : 0.2} />
+            <meshStandardMaterial color="#D4AF37" metalness={1} roughness={0.2} />
           </mesh>
         </group>
       </mesh>
@@ -60,9 +60,9 @@ function ResponsiveScene() {
   const { viewport } = useThree();
   const isMobile = viewport.width < 6;
 
-  // On portrait phones, scale the king down and position it lower so it complements the text
-  const kingPosition: [number, number, number] = isMobile ? [0, -2.5, -2] : [2, -1, 0];
-  const kingScale = isMobile ? 0.8 : 1;
+  // On mobile, use a much smaller scale and tuck it nicely to the bottom right
+  const kingPosition: [number, number, number] = isMobile ? [1.2, -1.5, -1] : [2, -1, 0];
+  const kingScale = isMobile ? 0.55 : 1;
 
   return (
     <>
@@ -76,18 +76,16 @@ function ResponsiveScene() {
         <AbstractKing isMobile={isMobile} position={kingPosition} rotation={[0.2, -0.2, 0]} scale={kingScale} />
       </PresentationControls>
 
-      <FloatingPiece position={isMobile ? [-1.5, 3.5, -6] : [-4, 2, -5]} scale={isMobile ? 0.6 : 0.8} speed={1} color="#ffffff" />
-      <FloatingPiece position={isMobile ? [2, -1.5, -9] : [5, -3, -8]} scale={isMobile ? 0.9 : 1.2} speed={1.2} color="#D4AF37" />
-      <FloatingPiece position={isMobile ? [-2, -3, -3] : [-3, -2, -3]} scale={isMobile ? 0.4 : 0.5} speed={2} color="#3B82F6" />
+      <FloatingPiece position={isMobile ? [-2, 2.5, -5] : [-4, 2, -5]} scale={isMobile ? 0.6 : 0.8} speed={1} color="#ffffff" />
+      <FloatingPiece position={isMobile ? [2, -1.5, -8] : [5, -3, -8]} scale={isMobile ? 0.9 : 1.2} speed={1.2} color="#D4AF37" />
+      <FloatingPiece position={isMobile ? [-1.5, -2, -3] : [-3, -2, -3]} scale={isMobile ? 0.4 : 0.5} speed={2} color="#3B82F6" />
 
-      {/* Disable heavy WebGL features on mobile to prevent crashes on older GPUs */}
-      {!isMobile && <ContactShadows position={[0, -2.5, 0]} opacity={0.5} scale={10} blur={2.5} far={4} />}
+      {/* Re-enable WebGL features on mobile to maintain cinematic look */}
+      <ContactShadows position={[0, -2.5, 0]} opacity={0.5} scale={10} blur={2.5} far={4} />
       
-      {!isMobile && (
-        <React.Suspense fallback={null}>
-          <Environment preset="city" />
-        </React.Suspense>
-      )}
+      <React.Suspense fallback={null}>
+        <Environment preset="city" />
+      </React.Suspense>
     </>
   );
 }

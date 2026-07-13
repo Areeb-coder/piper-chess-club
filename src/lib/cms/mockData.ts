@@ -163,7 +163,7 @@ export const editions: EventEdition[] = [
         ]
       }
     ],
-    "posterUrl": "/media/events/olympiad/2025/poster/F.E.T. CANTEEN, JAMIA MILLIA ISLAMIA, September 26_ - 4000 × 5000px.pdf",
+    "posterUrl": "/media/events/olympiad/2025/poster/Poster 2025.jpg",
     "galleryUrls": [
       "/media/events/olympiad/2025/photos/1st.jpeg"
     ]
@@ -192,6 +192,22 @@ export const editions: EventEdition[] = [
           "Syed Mohammad Rayyan",
           "Md Aabid Hussain",
           "Shazia Fatima"
+        ]
+      },
+      {
+        "rank": "Runner Up",
+        "names": [
+          "Hamiz",
+          "Firoz",
+          "Aaliyah"
+        ]
+      },
+      {
+        "rank": "Third Place",
+        "names": [
+          "Noman",
+          "Muneeb",
+          "Madeeha"
         ]
       }
     ]
