@@ -72,6 +72,7 @@ export const MobileNav = () => {
                   <Link href="/events" onClick={closeMenu} className={styles.navLink}>Events</Link>
                   <Link href="/legacy" onClick={closeMenu} className={styles.navLink}>Legacy</Link>
                   <Link href="/team" onClick={closeMenu} className={styles.navLink}>Team</Link>
+                  <Link href="/olympiad" onClick={closeMenu} className={styles.navLink} style={{ color: 'var(--accent-gold)' }}>Olympiad</Link>
                   <div className={styles.joinBtn}>
                     <Link href="/community" onClick={closeMenu} className="btn-primary" style={{ display: 'block', width: '100%' }}>Join</Link>
                   </div>

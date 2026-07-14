@@ -13,6 +13,7 @@ export const Header = () => {
         <Link href="/events">Events</Link>
         <Link href="/legacy">Legacy</Link>
         <Link href="/team">Team</Link>
+        <Link href="/olympiad" style={{ color: 'var(--accent-gold)' }}>Olympiad</Link>
         <div>
           <Link href="/community" className="btn-primary text-sm px-4 py-2">Join</Link>
         </div>

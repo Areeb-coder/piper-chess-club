@@ -1,0 +1,212 @@
+.teaserWrapper {
+  margin: 4rem auto;
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.95) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.teaserWrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 30px rgba(255, 215, 0, 0.05);
+}
+
+.teaserContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  padding: 3rem;
+  align-items: center;
+}
+
+.visualColumn {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnailFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  background: #000;
+  cursor: pointer;
+}
+
+.thumbnailVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.5s ease, transform 10s linear;
+}
+
+.teaserWrapper:hover .thumbnailVideo {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.frameGlow {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.1);
+  pointer-events: none;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 450px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.timeUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeValue {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1;
+}
+
+.timeLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.timeDivider {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: rgba(255, 215, 0, 0.5);
+  margin-top: -1.5rem;
+}
+
+.ctaBtn {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .teaserContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .thumbnailFrame {
+    max-height: 300px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .textColumn {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .countdown {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnailFrame {
+    width: 100%;
+  }
+  .timeValue {
+    font-size: 2rem;
+  }
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.thumbnailFrame:hover .playButton {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.4);
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.15), inset 0 0 15px rgba(255, 215, 0, 0.05);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.playIcon {
+  width: 36px;
+  height: 36px;
+  margin-left: 6px; 
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}

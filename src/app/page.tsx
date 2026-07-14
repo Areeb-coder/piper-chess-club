@@ -2,6 +2,7 @@ import { HeroScene } from '@/components/cinematic/HeroScene';
 import { ScrollReveal } from '@/components/cinematic/ScrollReveal';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { EventShowcase } from '@/components/sections/EventShowcase';
+import { OlympiadTeaser } from '@/components/sections/OlympiadTeaser';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -16,6 +17,11 @@ export default function Home() {
         <Link href="/events" className="btn-primary">Explore Events</Link>
         <Link href="/community" className="btn-secondary">Join the Club</Link>
       </HeroScene>
+
+      {/* Olympiad Teaser */}
+      <section className="section-padding max-w-5xl mx-auto" style={{ paddingTop: '2rem', paddingBottom: '0' }}>
+        <OlympiadTeaser />
+      </section>
 
       {/* 2. About Piper & 3. Achievements */}
       <section className="section-padding max-w-5xl mx-auto">

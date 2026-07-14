@@ -1,0 +1,64 @@
+.bannerContainer {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(15,15,15,0.8) 0%, rgba(30,30,30,0.95) 50%, rgba(15,15,15,0.8) 100%);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15); /* Subtle gold border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.bannerLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bannerLink:hover {
+  background: rgba(255, 215, 0, 0.03);
+}
+
+.bannerLink:hover .label {
+  color: var(--accent-gold);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.message {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .bannerLink {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+  }
+  .divider {
+    display: none;
+  }
+}
