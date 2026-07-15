@@ -1,0 +1,113 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+  background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+}
+
+.verifyBox {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h2 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0 0 0.5rem 0;
+}
+
+.header p {
+  color: #888;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.otpContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.otpInput {
+  width: 3rem;
+  height: 3.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #D4AF37;
+  font-family: var(--font-sans);
+  transition: all 0.3s ease;
+}
+
+.otpInput:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.5);
+  background: rgba(212, 175, 55, 0.05);
+  transform: translateY(-2px);
+}
+
+.timer {
+  text-align: center;
+  color: #ff5555;
+  font-size: 0.8rem;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  background: #D4AF37;
+  color: #000;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #f4c430;
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  background: rgba(255, 50, 50, 0.1);
+  color: #ff5555;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+  border: 1px solid rgba(255, 50, 50, 0.2);
+}

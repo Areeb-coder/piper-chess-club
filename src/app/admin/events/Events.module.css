@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #888;
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.addBtn {
+  background: #D4AF37;
+  color: #000;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.addBtn:hover {
+  background: #f4c430;
+  transform: translateY(-2px);
+}
+
+.tableWrapper {
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 1.2rem;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nameCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.slug {
+  font-size: 0.75rem;
+  color: #666;
+  font-family: monospace;
+}
+
+.catCell {
+  color: #aaa;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+.dateCell {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.statusBadge {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.active {
+  background: rgba(212, 175, 55, 0.1);
+  color: #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.draft {
+  background: rgba(255, 255, 255, 0.05);
+  color: #888;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.actionsCell {
+  display: flex;
+  gap: 1rem;
+}
+
+.editBtn {
+  color: #D4AF37;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.editBtn:hover {
+  text-decoration: underline;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #ff5555;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+.deleteBtn:hover {
+  text-decoration: underline;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem !important;
+  color: #666;
+  font-style: italic;
+}
+
+.loader {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.5rem;
+}
+
+.backLink {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.backLink:hover {
+  color: #fff;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.form {
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.inputGroup, .fullWidthGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label, .fullWidthGroup label {
+  color: #888;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inputGroup input, .inputGroup select, .fullWidthGroup textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus, .inputGroup select:focus, .fullWidthGroup textarea:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.5);
+  background: rgba(212, 175, 55, 0.02);
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.checkboxGroup input {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #D4AF37;
+  cursor: pointer;
+}
+
+.checkboxGroup label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.actions {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  background: #D4AF37;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #f4c430;
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

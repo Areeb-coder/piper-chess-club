@@ -1,0 +1,139 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.logoContainer {
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brandSubtitle {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #D4AF37;
+  letter-spacing: 4px;
+}
+
+.nav {
+  flex: 1;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.navLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink.active {
+  color: #D4AF37;
+}
+
+.navLabel {
+  position: relative;
+  z-index: 2;
+}
+
+.activeIndicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #D4AF37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  z-index: 1;
+}
+
+.footer {
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mobileToggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 102;
+  background: #000;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #D4AF37;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobileToggle {
+    display: block;
+  }
+  
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 99;
+  }
+}

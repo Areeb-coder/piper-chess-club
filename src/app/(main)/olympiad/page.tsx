@@ -148,6 +148,102 @@ export default function OlympiadPage() {
             </a>
           </div>
         </ScrollReveal>
+
+        <ScrollReveal delay={0.6}>
+          <div className={styles.rulesSection}>
+            <h2 className={styles.rulesTitle}>Official Rules & Regulations</h2>
+            
+            <div className={styles.rulesGrid}>
+              {/* Card 1 */}
+              <div className={styles.ruleCard}>
+                <h3 className={styles.ruleHeading}>Criteria of Team Formation</h3>
+                <ul className={styles.ruleList}>
+                  <li>Team of 3 players</li>
+                  <li>Strongest Player shall play the Board (A)</li>
+                  <li>One mandatory Women's Board- Board (W)</li>
+                  <li>No team can have an aggregate of more than 7 Pts</li>
+                  <li>Piper Chess Club has the right to modify the list of players and the categories whenever it feels required</li>
+                  <li>Please find below the list of players and their respective categories</li>
+                  <li>Red-Men and Orange-Men Players can only play at Board-(A) rank</li>
+                </ul>
+              </div>
+
+              {/* Card 2 */}
+              <div className={styles.ruleCard}>
+                <h3 className={styles.ruleHeading}>Men's List</h3>
+                <div className={styles.listsGrid}>
+                  <div className={styles.categoryGroup}>
+                    <div className={`${styles.tableHeader} ${styles.redCategory}`}>Red List = 4pts</div>
+                    <ul className={styles.tableBody}>
+                      <li className={styles.rowItem}>Hamza</li>
+                      <li className={styles.rowItem}>Hassan</li>
+                      <li className={styles.rowItem}>Paras</li>
+                      <li className={styles.rowItem}>Mayank</li>
+                      <li className={styles.rowItem}>Arif Jameel</li>
+                      <li className={styles.rowItem}>Abdul Mughni</li>
+                      <li className={styles.rowItem}>Mehtab</li>
+                      <li className={styles.rowItem}>Aryan Ahmed</li>
+                    </ul>
+                  </div>
+                  
+                  <div className={styles.categoryGroup}>
+                    <div className={`${styles.tableHeader} ${styles.orangeCategory}`}>Orange List = 3pts</div>
+                    <ul className={styles.tableBody}>
+                      <li className={styles.rowItem}>Saad Ansari</li>
+                      <li className={styles.rowItem}>Sagnik</li>
+                      <li className={styles.rowItem}>Yazdani</li>
+                      <li className={styles.rowItem}>Ali Israr</li>
+                      <li className={styles.rowItem}>Vishwajeet</li>
+                      <li className={styles.rowItem}>Samad</li>
+                    </ul>
+                  </div>
+                  
+                  <div className={styles.categoryGroup}>
+                    <div className={`${styles.tableHeader} ${styles.darkBlueCategory}`}>Dark Blue List = 2pts</div>
+                    <ul className={styles.tableBody}>
+                      <li className={styles.rowItem}>Abbas Zaheer</li>
+                      <li className={styles.rowItem}>Anas Saifi</li>
+                      <li className={styles.rowItem}>Razi</li>
+                      <li className={styles.rowItem}>Ali Hasan</li>
+                      <li className={styles.rowItem}>Samar Arquam</li>
+                    </ul>
+                  </div>
+                  
+                  <div className={styles.categoryGroup}>
+                    <div className={`${styles.tableHeader} ${styles.blueCategory}`}>Blue List = 1pt</div>
+                    <ul className={styles.tableBody}>
+                      <li className={styles.rowItem}>All other eligible players who are not listed</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className={styles.ruleCard}>
+                <h3 className={styles.ruleHeading}>Women's List</h3>
+                <div className={styles.listsGrid}>
+                  <div className={styles.categoryGroup}>
+                    <div className={`${styles.tableHeader} ${styles.redCategory}`}>Red List = 3pts</div>
+                    <ul className={styles.tableBody}>
+                      <li className={styles.rowItem}>Fatma Al Madni</li>
+                      <li className={styles.rowItem}>Sabeela</li>
+                      <li className={styles.rowItem}>Aaliyah Batool</li>
+                      <li className={styles.rowItem}>Iqra Akhtar</li>
+                      <li className={styles.rowItem}>Aqsa Tanzim</li>
+                    </ul>
+                  </div>
+                  
+                  <div className={styles.categoryGroup}>
+                    <div className={`${styles.tableHeader} ${styles.blueCategory}`}>Blue List = 2pts</div>
+                    <ul className={styles.tableBody}>
+                      <li className={styles.rowItem}>All other eligible players who are not listed</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
       </section>
     </div>
   );

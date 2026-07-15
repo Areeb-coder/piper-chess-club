@@ -1,10 +1,32 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, Component, ErrorInfo, ReactNode } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { Environment, Float, PresentationControls, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 import styles from './CinematicBackground.module.css';
+
+class CanvasErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.warn('WebGL Context lost or failed to create. Falling back to static background.', error);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return null;
+    }
+    return this.props.children;
+  }
+}
 
 // A placeholder abstract chess piece (King)
 function AbstractKing({ isMobile, ...props }: any) {
@@ -105,9 +127,11 @@ export const CinematicBackground = () => {
       <div className={styles.particleLayer} />
 
       {/* 3D Scene */}
-      <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
-        <ResponsiveScene />
-      </Canvas>
+      <CanvasErrorBoundary>
+        <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
+          <ResponsiveScene />
+        </Canvas>
+      </CanvasErrorBoundary>
 
       {/* Final Vignette/Overlay */}
       <div className={styles.darkOverlay} style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at center, transparent 0%, #000 100%)', opacity: 0.8 }} />
