@@ -71,7 +71,7 @@ export default function AdminLegacy() {
             <tbody>
               {entries.map((entry, i) => (
                 <motion.tr 
-                  key={entry._id as string}
+                  key={String(entry._id)}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
@@ -88,7 +88,7 @@ export default function AdminLegacy() {
                   <td className={styles.dateCell}>{new Date(entry.createdAt).toLocaleDateString()}</td>
                   <td className={styles.actionsCell}>
                     <Link href={`/admin/legacy/edit/${entry._id}`} className={styles.editBtn}>Edit</Link>
-                    <button onClick={() => deleteEntry(entry._id as string)} className={styles.deleteBtn}>Delete</button>
+                    <button onClick={() => deleteEntry(String(entry._id))} className={styles.deleteBtn}>Delete</button>
                   </td>
                 </motion.tr>
               ))}

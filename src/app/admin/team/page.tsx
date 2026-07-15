@@ -72,7 +72,7 @@ export default function AdminTeamMembers() {
             <tbody>
               {members.map((member, i) => (
                 <motion.tr 
-                  key={member._id as string}
+                  key={String(member._id)}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
@@ -98,7 +98,7 @@ export default function AdminTeamMembers() {
                   <td className={styles.dateCell}>{new Date(member.createdAt).toLocaleDateString()}</td>
                   <td className={styles.actionsCell}>
                     <Link href={`/admin/team/edit/${member._id}`} className={styles.editBtn}>Edit</Link>
-                    <button onClick={() => deleteMember(member._id as string)} className={styles.deleteBtn}>Delete</button>
+                    <button onClick={() => deleteMember(String(member._id))} className={styles.deleteBtn}>Delete</button>
                   </td>
                 </motion.tr>
               ))}
