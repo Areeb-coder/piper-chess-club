@@ -83,7 +83,6 @@ export default function OlympiadPage() {
             <video 
               ref={videoRef}
               src="/videos/olympiad-teaser.mp4?v=3"
-              type="video/mp4"
               className={styles.teaserVideo}
               autoPlay
               playsInline
