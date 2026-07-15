@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     await Otp.deleteOne({ _id: otpRecord._id });
 
     // Issue the main admin token
-    const adminToken = await signJwtToken({ email: payload.email, role: 'admin' }, { exp: '1h' });
+    const adminToken = await signJwtToken({ email: payload.email as string, role: 'admin' }, { exp: '1h' });
 
     const response = NextResponse.json({ message: 'Verified successfully' }, { status: 200 });
 

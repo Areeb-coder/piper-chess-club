@@ -8,7 +8,7 @@ const getJwtSecretKey = () => {
   return new TextEncoder().encode(secret);
 };
 
-export async function signJwtToken(payload: { email: string }, options: { exp: string }) {
+export async function signJwtToken(payload: any, options: { exp: string }) {
   const secret = getJwtSecretKey();
   const alg = 'HS256';
   return new SignJWT(payload)
