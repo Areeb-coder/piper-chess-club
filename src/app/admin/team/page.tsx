@@ -33,7 +33,7 @@ export default function AdminTeamMembers() {
     try {
       const res = await fetch(`/api/admin/team-members/${id}`, { method: 'DELETE' });
       if (res.ok) {
-        setMembers(members.filter(m => m._id !== id));
+        setMembers(members.filter(m => String(m._id) !== id));
       } else {
         alert('Failed to delete member');
       }

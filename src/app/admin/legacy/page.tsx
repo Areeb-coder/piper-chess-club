@@ -33,7 +33,7 @@ export default function AdminLegacy() {
     try {
       const res = await fetch(`/api/admin/legacy/${id}`, { method: 'DELETE' });
       if (res.ok) {
-        setEntries(entries.filter(e => e._id !== id));
+        setEntries(entries.filter(e => String(e._id) !== id));
       } else {
         alert('Failed to delete legacy entry');
       }

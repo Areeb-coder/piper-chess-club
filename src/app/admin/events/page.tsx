@@ -41,7 +41,7 @@ export default function AdminEvents() {
     try {
       const res = await fetch(`/api/admin/events/${id}`, { method: 'DELETE' });
       if (res.ok) {
-        setEvents(events.filter(e => e._id !== id));
+        setEvents(events.filter(e => String(e._id) !== id));
       } else {
         alert('Failed to delete event');
       }
