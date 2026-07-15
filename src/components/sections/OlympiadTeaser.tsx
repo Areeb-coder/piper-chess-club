@@ -56,7 +56,6 @@ export const OlympiadTeaser = () => {
               <video 
                 ref={videoRef}
                 src="/videos/olympiad-teaser.mp4?v=3"
-                type="video/mp4"
                 className={styles.thumbnailVideo}
                 playsInline
                 onPlay={() => setIsPlaying(true)}
