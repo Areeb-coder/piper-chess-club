@@ -45,6 +45,13 @@ export default function TeamPage() {
       instagram: 'https://www.instagram.com/syed.abdullah386/',
       linkedin: 'https://www.linkedin.com/in/syed-abdullah-573718331/',
       image: '/media/team/Syed Abdullah.jpg' 
+    },
+    { 
+      name: 'Saad Ansari', 
+      role: 'Core Member', 
+      quote: "By the time you see the trap, it's already over.", 
+      instagram: 'https://www.instagram.com/saad_ansari_13/',
+      image: '/media/team/Saad.jpg' 
     }
   ];
 
