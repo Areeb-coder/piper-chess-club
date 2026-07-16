@@ -163,7 +163,7 @@ export default function OlympiadPage() {
                   <li>No team can have an aggregate of more than 7 Pts</li>
                   <li>Piper Chess Club has the right to modify the list of players and the categories whenever it feels required</li>
                   <li>Please find below the list of players and their respective categories</li>
-                  <li>Red-Men and Orange-Men Players can only play at Board-(A) rank</li>
+                  <li>Board A is open to all players. However, Red and Orange players must play on Board A only.</li>
                 </ul>
               </div>
 
