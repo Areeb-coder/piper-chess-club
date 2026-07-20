@@ -179,7 +179,7 @@ export default function OlympiadPage() {
                       <li className={styles.rowItem}>Paras</li>
                       <li className={styles.rowItem}>Mayank</li>
                       <li className={styles.rowItem}>Arif Jameel</li>
-                      <li className={styles.rowItem}>Abdul Mughni</li>
+                      <li className={styles.rowItem}>Sagnik</li>
                       <li className={styles.rowItem}>Mehtab</li>
                       <li className={styles.rowItem}>Aryan Ahmed</li>
                     </ul>
@@ -189,7 +189,6 @@ export default function OlympiadPage() {
                     <div className={`${styles.tableHeader} ${styles.orangeCategory}`}>Orange List = 3pts</div>
                     <ul className={styles.tableBody}>
                       <li className={styles.rowItem}>Saad Ansari</li>
-                      <li className={styles.rowItem}>Sagnik</li>
                       <li className={styles.rowItem}>Yazdani</li>
                       <li className={styles.rowItem}>Ali Israr</li>
                       <li className={styles.rowItem}>Vishwajeet</li>

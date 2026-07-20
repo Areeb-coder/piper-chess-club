@@ -54,13 +54,14 @@
 .heroTitle {
   font-family: var(--font-display);
   font-size: 5rem;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(to bottom right, #fff, #b89c50);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.02em;
+  padding-bottom: 0.15em;
 }
 
 .heroSubtitle {

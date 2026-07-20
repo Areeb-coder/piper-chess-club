@@ -14,14 +14,14 @@ export default function TeamPage() {
     },
     { 
       name: 'Hamza Akhtar', 
-      role: 'Governor', 
+      role: 'Chess Governor', 
       quote: 'Piper Chess Champion', 
       instagram: 'https://www.instagram.com/_11amza_/',
       image: '/media/team/MD HAMZA AKHTAR.jpeg' 
     },
     { 
       name: 'Mohd hasan', 
-      role: 'Governor', 
+      role: 'Vice Chess Governor', 
       quote: 'Play the board, not the opponent',
       image: '/media/team/Hasan.jpeg' 
     },
@@ -40,7 +40,7 @@ export default function TeamPage() {
     },
     { 
       name: 'Syed Abdullah', 
-      role: 'Social Media Coordinator', 
+      role: 'SMM Head', 
       quote: 'The board is silent, but every move speaks.', 
       instagram: 'https://www.instagram.com/syed.abdullah386/',
       linkedin: 'https://www.linkedin.com/in/syed-abdullah-573718331/',
