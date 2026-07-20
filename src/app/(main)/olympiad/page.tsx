@@ -142,8 +142,8 @@ export default function OlympiadPage() {
 
         <ScrollReveal delay={0.4}>
           <div className={styles.ctaContainer}>
-            <a href="https://forms.gle/7dRAondHC2ekvvTv7" target="_blank" rel="noopener noreferrer" className={`btn-primary ${styles.ctaButton}`}>
-              Enter the Arena
+            <a href="https://forms.gle/5fEQuMDg48SBLfaRA" target="_blank" rel="noopener noreferrer" className={`btn-primary ${styles.ctaButton}`}>
+              Register Now
             </a>
           </div>
         </ScrollReveal>
