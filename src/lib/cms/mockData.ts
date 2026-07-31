@@ -384,6 +384,9 @@ export const editions: EventEdition[] = [
           "Paras Sharma"
         ]
       }
+    ],
+    "galleryUrls": [
+      "/media/events/piper-championship/2026/photos/championship-2026-winners.jpg"
     ]
   },
   {
