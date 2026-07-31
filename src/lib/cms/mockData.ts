@@ -44,19 +44,19 @@ export const events: Event[] = [
     "event_category": "flagship",
     "visibility_rank": 4,
     "primary_color": "#e67e22",
-    "overview_richtext": "<p>The pinnacle of individual achievement.</p>",
+    "overview_richtext": "<p>The pinnacle of individual achievement.</p><h3>Championship Format</h3><p>The Candidates Tournament determines the official challenger for the Piper Chess Championship. The winner of the Candidates Tournament earns the right to challenge the reigning Piper Chess Champion. If the reigning champion wins the championship match, they successfully defend their title. If the challenger wins, a new Piper Chess Champion is crowned.</p>",
     "format_summary": "Individual",
     "typical_time_control": "15+10",
     "is_active": true
   },
   {
     "slug": "candidates",
-    "name": "Candidates Tournament",
+    "name": "Candidates",
     "short_tagline": "For the Right to Challenge.",
     "event_category": "rivalry",
     "visibility_rank": 5,
     "primary_color": "#9b59b6",
-    "overview_richtext": "<p>The most exclusive individual tournament of the year. Only the top 8 players are invited.</p>",
+    "overview_richtext": "<p>The most exclusive individual tournament of the year. The winner earns the right to challenge the reigning Piper Chess Champion for the ultimate crown.</p>",
     "format_summary": "Double Round-Robin",
     "typical_time_control": "15+10",
     "is_active": true
@@ -355,6 +355,38 @@ export const editions: EventEdition[] = [
     ]
   },
   {
+    "slug": "piper-championship-2026",
+    "eventSlug": "piper-championship",
+    "year": 2026,
+    "title": "Piper Chess Championship 2026",
+    "start_date": "2026-10-10",
+    "end_date": "2026-10-11",
+    "location": "Main Hall",
+    "status": "completed",
+    "edition_intro": "",
+    "heroIntro": "A new era forged in combat. The 2026 Piper Chess Championship witnessed a historic clash between the top contenders of the Candidates Tournament.",
+    "overview": "The reigning champion, Md Affan Hussain, did not participate in the 2026 title defence. Because of this, the Championship Match was contested between the Winner of the Candidates Tournament, Paras Sharma, and the Runner-Up of the Candidates Tournament, Md Hamza Akhtar. In a battle of profound strategy and relentless tactical pressure, Md Hamza Akhtar won the Championship Match and became the Piper Chess Champion for 2026.",
+    "highlights": [
+      "The reigning champion, Md Affan Hussain, did not participate in the 2026 title defence.",
+      "Championship Match contested between Candidates winner Paras Sharma and runner-up Md Hamza Akhtar.",
+      "Md Hamza Akhtar secured victory to claim the 2026 Piper Chess Champion title."
+    ],
+    "results": [
+      {
+        "rank": "Piper Chess Champion",
+        "names": [
+          "Md Hamza Akhtar"
+        ]
+      },
+      {
+        "rank": "Runner Up",
+        "names": [
+          "Paras Sharma"
+        ]
+      }
+    ]
+  },
+  {
     "slug": "piper-championship-2025",
     "eventSlug": "piper-championship",
     "year": 2025,
@@ -365,15 +397,15 @@ export const editions: EventEdition[] = [
     "status": "completed",
     "edition_intro": "",
     "heroIntro": "Where legends are minted and challengers fall. The 2025 Piper Chess Championship delivered a masterclass in competitive resilience and tactical brilliance.",
-    "overview": "The 2025 edition of the Piper Chess Championship raised the standard of individual competition to new heights. Against a field of seasoned veterans and hungry challengers, survival required deep positional understanding and lethal attacking instincts. The championship matches were defined by tension and profound strategy, culminating in a shift of power at the highest echelons of Piper Chess Club.",
+    "overview": "The 2025 edition of the Piper Chess Championship raised the standard of individual competition to new heights. Against a field of seasoned veterans and hungry challengers, survival required deep positional understanding and lethal attacking instincts. The championship culminated in a decisive triumph at the highest echelons of Piper Chess Club.",
     "highlights": [
-      "A shift in the hierarchy as new champions emerged from a grueling field.",
-      "Md Affan Hussain claimed the overall victory with consistent brilliance.",
-      "Md Hamza Akhtar delivered a clutch performance to secure the Championship Match."
+      "A shift in the hierarchy as elite grandmasters emerged from a grueling field.",
+      "Md Affan Hussain claimed victory with consistent brilliance.",
+      "Md Aarif Jamil put up an exceptional performance to secure the runner-up position."
     ],
     "results": [
       {
-        "rank": "Winner",
+        "rank": "Piper Chess Champion",
         "names": [
           "Md Affan Hussain"
         ]
@@ -381,13 +413,7 @@ export const editions: EventEdition[] = [
       {
         "rank": "Runner Up",
         "names": [
-          "Md Arif Jamil"
-        ]
-      },
-      {
-        "rank": "Championship Match Winner",
-        "names": [
-          "Md Hamza Akhtar"
+          "Md Aarif Jamil"
         ]
       }
     ]
@@ -421,12 +447,6 @@ export const editions: EventEdition[] = [
         "names": [
           "Md Affan Hussain"
         ]
-      },
-      {
-        "rank": "Championship Match Winner",
-        "names": [
-          "Hedayatullah Munib"
-        ]
       }
     ]
   },
@@ -445,19 +465,25 @@ export const editions: EventEdition[] = [
     "highlights": [
       "Brutal, protracted struggles that tested the limits of endurance.",
       "Paras Sharma navigated the complex field to emerge victorious.",
-      "Narrow margins defined the difference between advancement and elimination."
+      "Md Hamza Akhtar and Md Aarif Jamil fought fiercely to secure top podium places."
     ],
     "results": [
       {
-        "rank": "Winner",
+        "rank": "🥇 Winner",
         "names": [
           "Paras Sharma"
         ]
       },
       {
-        "rank": "Runner Up",
+        "rank": "🥈 Runner-Up",
         "names": [
           "Md Hamza Akhtar"
+        ]
+      },
+      {
+        "rank": "🥉 Third Place",
+        "names": [
+          "Md Aarif Jamil"
         ]
       }
     ],
@@ -480,7 +506,7 @@ export const editions: EventEdition[] = [
     "highlights": [
       "A masterclass in high-stakes, uncompromising chess.",
       "Md Affan Hussain demonstrated exceptional resilience to secure the victory.",
-      "A definitive display of strength that silenced any doubters."
+      "Ahmadullah Khan fought valiantly to earn the runner-up position."
     ],
     "results": [
       {

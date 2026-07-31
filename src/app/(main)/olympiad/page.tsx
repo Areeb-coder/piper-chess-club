@@ -228,6 +228,7 @@ export default function OlympiadPage() {
                       <li className={styles.rowItem}>Aaliyah Batool</li>
                       <li className={styles.rowItem}>Iqra Akhtar</li>
                       <li className={styles.rowItem}>Aqsa Tanzim</li>
+                      <li className={styles.rowItem}>Sadika</li>
                     </ul>
                   </div>
                   
