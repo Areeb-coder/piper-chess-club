@@ -182,6 +182,7 @@ export default function OlympiadPage() {
                       <li className={styles.rowItem}>Sagnik</li>
                       <li className={styles.rowItem}>Mehtab</li>
                       <li className={styles.rowItem}>Aryan Ahmed</li>
+                      <li className={styles.rowItem}>Akhiyar</li>
                     </ul>
                   </div>
                   
