@@ -195,7 +195,7 @@ export default function OlympiadPage() {
                       <li className={styles.rowItem}>Ali Israr</li>
                       <li className={styles.rowItem}>Vishwajeet</li>
                       <li className={styles.rowItem}>Samad</li>
-                      <li className={styles.rowItem}>Anas Saifi</li>
+                      <li className={styles.rowItem}>Anas Ansari</li>
                       <li className={styles.rowItem}>Rudraaksh</li>
                     </ul>
                   </div>
@@ -207,7 +207,7 @@ export default function OlympiadPage() {
                       <li className={styles.rowItem}>Razi</li>
                       <li className={styles.rowItem}>Ali Hasan</li>
                       <li className={styles.rowItem}>Samar Arquam</li>
-                      <li className={styles.rowItem}>Tahseen</li>
+                      <li className={styles.rowItem}>Anas Saifi</li>
                       <li className={styles.rowItem}>Abdul samad</li>
                       <li className={styles.rowItem}>Fayas</li>
                     </ul>
